@@ -13,7 +13,7 @@ import org.json.JSONObject
 class GroqVM : ViewModel() {
 
   private val client = OkHttpClient()
-
+  private val apiKey = "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"
 
   suspend fun getResponse(message: String): String {
 
