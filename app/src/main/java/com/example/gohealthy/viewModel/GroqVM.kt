@@ -13,7 +13,7 @@ import org.json.JSONObject
 class GroqVM : ViewModel() {
 
   private val client = OkHttpClient()
-  private val apiKey = "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"
+  private val apiKey = "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"
 
   suspend fun getResponse(message: String): String {
 
@@ -29,6 +29,7 @@ class GroqVM : ViewModel() {
         "- calories\n" +
         "- food / meals\n" +
         "- protein / carbs / fat\n" +
+        "- run / walk\n" +
         "- steps and activity tracking\n\n" +
         "Please ask something in these areas 😊"
     }
@@ -78,7 +79,7 @@ class GroqVM : ViewModel() {
     val keywords = listOf(
       "health","healthy","diet","weight","exercise","fitness",
       "gym","calories","food","meal","protein","carbs",
-      "fat","training","workout","steps"
+      "fat","training","workout","steps", "run", "walk"
     )
     return keywords.any { text.lowercase().contains(it) }
   }
